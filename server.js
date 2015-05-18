@@ -1,10 +1,10 @@
 var Hapi   = require("hapi");
-var server = new Hapi.Server;
+var server = new Hapi.Server();
 var Path   = require("path");
-var index  = Path.resolve(__dirname + "/public/index.html");
+var index  = Path.resolve(__dirname + "/index.html");
 
 server.connection({
-  port: process.env.PORT || 4000
+  port: Number(process.env.PORT) || 4000
 });
 
 server.route([
@@ -20,7 +20,18 @@ server.route([
     method  : "GET",
     path    : "/{param*}",
     handler : {
-      directory : { path : Path.resolve(__dirname + "public")
+      directory : {
+        path : Path.resolve(__dirname + "/public/")
+      }
+    }
+  },
+
+  {
+    method  : "GET",
+    path    : "/test/{param}",
+    handler : {
+      directory : {
+        path : Path.resolve(__dirname + "/test/")
       }
     }
   }
