@@ -16,6 +16,12 @@ test("The font-size of the timer should be 28px", function() {
   equal(style, "28px", "the timer font-size is 28px");
 })
 
+test("The text-color of the stopwatch should be green", function() {
+var stopwatch = document.getElementById("stopwatch");
+var style = window.getComputedStyle(stopwatch).getPropertyValue("color");
+equal(style, "rgb(0, 200, 0)", "the stopwatch text-color is green");
+});
+
 test("The stopwatch should have a left margin of 20px", function() {
   var stopwatch = document.getElementById("stopwatch");
   var style = window.getComputedStyle(stopwatch).getPropertyValue("margin-left");
