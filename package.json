@@ -1,0 +1,26 @@
+{
+  "name": "only-built-4-qunit-linx",
+  "version": "1.0.0",
+  "description": "QUnit practice",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rorysedgwick/only-built-4-qunit-linx.git"
+  },
+  "author": "rory sedgwick",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rorysedgwick/only-built-4-qunit-linx/issues"
+  },
+  "homepage": "https://github.com/rorysedgwick/only-built-4-qunit-linx",
+  "dependencies": {
+    "hapi": "^8.4.0"
+  }
+}
